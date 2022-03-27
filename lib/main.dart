@@ -4,7 +4,7 @@ import 'package:future_garages/UpperBar.dart';
 import 'package:future_garages/UpperBody.dart';
 import 'package:future_garages/middleBody.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -22,11 +22,19 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xf7def5ef),
+                Color(0xffd5e8e5),
+                // Color(0xffbce3d9),
+              ],
+            ),
+          ),
           child: Column(
             children: <Widget>[
-              SizedBox(
-                height: 30,
-              ),
               UpperBar(),
               UpperBody(),
               MiddleBody(),
@@ -38,4 +46,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
