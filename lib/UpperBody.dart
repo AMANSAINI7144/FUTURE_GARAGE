@@ -41,8 +41,19 @@ class _UpperBodyState extends State<UpperBody> {
           ),
           // child: Text("hello World"),
         ),
+        SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Total Range",
+          style: TextStyle(
+            color: Colors.blueGrey,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
-    ));
+    ),);
   }
 }
 

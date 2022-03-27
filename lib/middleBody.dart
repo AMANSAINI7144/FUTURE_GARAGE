@@ -99,9 +99,10 @@ class _MiddleBodyState extends State<MiddleBody> {
                             ),
                           ),
                           SizedBox(
-                            height: 5,
+                            height: 20,
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
                               Text(
                                   "Saving mode",
@@ -123,9 +124,15 @@ class _MiddleBodyState extends State<MiddleBody> {
                             ],
                           ),
                           SizedBox(
-                            height: 8,
+                            height: 15,
                           ),
-                          Text("Find Station >"),
+                          Text(
+                              "Find Station >",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green,
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -147,11 +154,14 @@ class _MiddleBodyState extends State<MiddleBody> {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Text(
-                                        "Type Pressure",
+                                        "Tyre Pressure",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                         ),
                                       ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
                                     ),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -180,11 +190,12 @@ class _MiddleBodyState extends State<MiddleBody> {
                                           ],
                                         ),
                                         SizedBox(
-                                          width: 10,
+                                          width: 8,
                                         ),
                                         Column(
                                           children: [
                                             Row(
+                                              mainAxisAlignment: MainAxisAlignment.start,
                                               children: <Widget>[
                                                 Text(
                                                     "32",
@@ -219,7 +230,7 @@ class _MiddleBodyState extends State<MiddleBody> {
                           ]
                       ),
                       Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
                               height: height * 0.16,
@@ -237,7 +248,14 @@ class _MiddleBodyState extends State<MiddleBody> {
                                       ),
                                     ),
                                     Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
+                                        Icon(
+                                          Icons.ac_unit_sharp,
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
                                         Text(
                                           "20,000 Km",
                                           style: TextStyle(

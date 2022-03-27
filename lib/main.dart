@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:future_garages/LowerBar.dart';
 import 'package:future_garages/UpperBar.dart';
@@ -35,9 +36,18 @@ class _MyAppState extends State<MyApp> {
           ),
           child: Column(
             children: <Widget>[
+              SizedBox(
+                height: 40,
+              ),
               UpperBar(),
               UpperBody(),
+              SizedBox(
+                height: 20,
+              ),
               MiddleBody(),
+              SizedBox(
+                height: 20,
+              ),
               LowerBar(),
             ],
           ),

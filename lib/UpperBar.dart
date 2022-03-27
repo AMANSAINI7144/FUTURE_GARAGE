@@ -11,62 +11,51 @@ class _UpperBarState extends State<UpperBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: AppBar(
-        leading: const Padding(
-          padding: EdgeInsets.fromLTRB(15, 12, 0, 5),
-          child: CircleAvatar(
-            child: Image(
-              image: AssetImage('images/symbol.png'),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          CircleAvatar(
+            backgroundColor: Colors.black,
+            radius: 22.0,
+            child: CircleAvatar(
+              radius: 20.0,
+              child: ClipRRect(
+                child: Image.asset('assets/face.jpg'),
+                borderRadius: BorderRadius.circular(50.0),
+              ),
             ),
           ),
-        ),
-        titleSpacing: 15,
-        title: Container(
-          padding: EdgeInsets.fromLTRB(10, 15, 0, 5),
-          child: Row(
+          Column(
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Row(children: <Widget>[
-                    Text(
-                      "Future Garages - Alpha1",
-                      style: TextStyle(color: Colors.grey, fontSize: 14),
-                    )
-                  ]),
-                  Row(children: <Widget>[
-                    Text(
-                      "Vishesh Dwivedi",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w900),
-                    )
-                  ]),
-                ],
+              Text(
+                "Future Garages - Alpha 1",
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                ),
               ),
-              const SizedBox(
-                width: 40,
+              Text(
+                "Vishesh Dwivedi",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                ),
               ),
-              Column(
-                children: <Widget>[
-                  CircleAvatar(
-                    backgroundColor: Colors.black,
-                    child:IconButton(
-                        onPressed: null,
-                        icon: Icon(
-                          Icons.settings,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                  )
-
-                ],
-              )
             ],
           ),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
+          CircleAvatar(
+            backgroundColor: Colors.black,
+            child: IconButton(
+                onPressed: null,
+                icon: Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                  size: 20,
+                ),
+            ),
+          ),
+        ],
       ),
     );
   }
