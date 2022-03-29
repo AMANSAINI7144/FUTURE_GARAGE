@@ -35,19 +35,11 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              SizedBox(
-                height: 40,
-              ),
               UpperBar(),
               UpperBody(),
-              SizedBox(
-                height: 20,
-              ),
               MiddleBody(),
-              SizedBox(
-                height: 20,
-              ),
               LowerBar(),
             ],
           ),
