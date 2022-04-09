@@ -43,7 +43,6 @@ class _LowerBarState extends State<LowerBar> {
                     color: Colors.green,
                   ),
                 ),
-
                 IconButton(
                   onPressed: () {
                     Navigator.push(
@@ -68,7 +67,6 @@ class _LowerBarState extends State<LowerBar> {
                     color: Colors.green,
                   ),
                 ),
-
                 IconButton(
                   onPressed: () {
                     Navigator.push(
@@ -81,7 +79,6 @@ class _LowerBarState extends State<LowerBar> {
                     color: Colors.green,
                   ),
                 ),
-
               ],
             ),
           ),

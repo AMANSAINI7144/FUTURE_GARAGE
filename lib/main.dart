@@ -35,12 +35,29 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               UpperBar(),
               UpperBody(),
               MiddleBody(),
-              LowerBar(),
+              Container(
+                  child: Column(
+                    children: <Widget>[
+                      LowerBar(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        height: 5,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(24, 25, 26, 0.7),
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                      ),
+                    ],
+                  ),
+              ),
             ],
           ),
         ),
