@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:future_garages/LowerBar.dart';
 import 'package:future_garages/UpperBar.dart';
@@ -38,7 +37,22 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               UpperBar(),
-              UpperBody(),
+              Container(child: Column(
+                children: <Widget>[
+                  UpperBody(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                      "Total Range",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+              ),),
               MiddleBody(),
               Container(
                   child: Column(

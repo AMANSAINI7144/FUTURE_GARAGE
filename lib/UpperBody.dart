@@ -11,68 +11,94 @@ class _UpperBodyState extends State<UpperBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Column(
-      children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(top: 100, left: 100),
-          child: Center(
-            child: CustomPaint(
-              child: Center(
-                child: Column(
-                  children: <Widget>[
-                    IconButton(
-                        onPressed: null,
-                        icon: Icon(
-                          Icons.accessibility_new_sharp,
-                          color: Colors.white,
-                        )),
-                    Text(
-                      "360",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 30),
-                    ),
-                  ],
+      child: Center(
+          child: Stack(
+            children: <Widget>[
+              Center(
+                child: ClipOval(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Colors.green,
+                            width: 1.0,
+                            style: BorderStyle.solid
+                        ),
+                        shape: BoxShape.circle),
+                    height: 170.0,
+                    width: 170.0,
+                  ),
                 ),
               ),
-              painter: DrawCircle(),
-            ),
+              Container(
+                padding: EdgeInsets.only(top: 10),
+                alignment: Alignment.center,
+                child: ClipOval(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color(0xC66FE2C1),
+                            Color(0xC684EFB8),
+                          ],
+                        ),
+                        border: Border.all(
+                          color: Colors.tealAccent,
+                          width: 1.0,
+                          style: BorderStyle.solid,
+                        ),
+                        shape: BoxShape.circle
+                    ),
+                    height: 150.0,
+                    width: 150.0,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 21),
+                alignment: Alignment.center,
+                child: ClipOval(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xF51E1E1F),
+                          Color(0xF51E1E1F),
+                        ],
+                      ),
+                    ),
+                    height: 130.0,
+                    width: 130.0,
+                    child: Container(child:
+                    Center(
+                      child:
+                      Stack(
+                        children: [
+                          Container(
+                            alignment: Alignment.topCenter,
+                            padding: EdgeInsets.only(top: 10),
+                            child: Image.asset("images/light.png",height: 30,width: 50,),
+                          ),
+                          Center(
+                            child: Text("360",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.w700)),
+                          ),
+                          Container(
+                            alignment: Alignment.bottomCenter,
+                            padding: EdgeInsets.only(bottom: 15),
+                            child: Text("Km",style: TextStyle(color: Colors.grey,fontSize: 20,fontWeight: FontWeight.w700)),
+                          ),
+                        ],
+                      ),
+                    ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
-          // child: Text("hello World"),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text(
-          "Total Range",
-          style: TextStyle(
-            color: Colors.blueGrey,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ],
-    ),);
-  }
-}
-
-class DrawCircle extends CustomPainter {
-  var paint0 = Paint()..color = Colors.greenAccent;
-  var paint1 = Paint()..color = Colors.greenAccent;
-  var paint2 = Paint()..color = Colors.black;
-  // ..strokeWidth = 16
-  // ..style = PaintingStyle.stroke;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    canvas.drawCircle(Offset(0.0, 0.0), 70, paint1);
-    canvas.drawCircle(Offset(0.0, 0.0), 60, paint2);
-    // canvas.drawCircle(Offset(0.0, 0.0), 70, paint2);
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return false;
+        ));
   }
 }
